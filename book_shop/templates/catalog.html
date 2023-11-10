@@ -1,0 +1,561 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный магазин</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/stylesc.css' %}">
+</head>
+<body>
+    <div class="headernavfix">
+        <header class="text-white text-center py-4">
+            <h1>Наш весь ассортимент книг</h1>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mr-5 ml-5"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item mr-5 ml-5"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                <li class="nav-item mr-5 ml-5"><a class="nav-link" href="about.html">О нас</a></li>
+                <li class="nav-item mr-5 ml-5"><a class="nav-link" href="basket.html">Корзина</a></li>
+                <li class="nav-item mr-5 ml-5"><a class="nav-link" href="Registration.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="container">
+        <nav class="navbar navbar-expand-lg d-flex flex-column navbar-dark fixed-left">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link scroll-link" href="#proza">Проза</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#fantastika">Фантастика, Ужасы</a></li>
+            </ul>
+        </nav>
+        <nav class="navbar navbar-expand-lg d-flex flex-column navbar-dark fixed-right">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link scroll-link" href="#ostrosyuzhet">Остросюжетная литература</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#poeziya">Поэзия</a></li>
+            </ul>
+        </nav>
+
+        <div class="sections" id="proza">
+            <h1>Проза:</h1>
+            <h2>Классическая</h2>
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/554/238_390_1/554b5b74ca09e329a36563ed5a8d32bc.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Гранатовый браслет</h5>
+                            <p class="card-text">Куприн А.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/4b6/239_390_1/4b68a5212fc0d460dfca030c99735d86.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Джейн Эйр</h5>
+                            <br>
+                            <p class="card-text">Бронте Ш.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/e11/239_390_1/e11491355ff0bf7c2403d75d06eb942a.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Призрак Оперы</h5>
+                            <p class="card-text">Леру Г.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/0e4/236_390_1/0e4f219b78665022c8fa85e985751589.jpg" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Маленький принц</h5>
+                            <p class="card-text">Сент-Экзюпери</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/45e/261_390_1/45ecf798fcc337ab2dc2ee68b7d3db66.jpg" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Мастер и Маргарита</h5>
+                            <p class="card-text">Булгаков М.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/cd2/238_390_1/cd2244d99fee7d128a5bad080382369b.jpg" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Ход королевы</h5>
+                            <p class="card-text">Тевис У.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mt-4">Современная</h2>
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/995/262_390_1/995f9f23dbd6b2941533de87d6322ca3.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Мятная сказка</h5>
+                            <p class="card-text">Полярный А.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/129/280_390_1/1290112088295f481954db524d88ae36.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Мятная сказка</h5>
+                            <p class="card-text">Полярный А.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/5f2/238_390_1/5f2d1fd72fa7b6355cf910f47ad2a2bf.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Войны Миллигана</h5>
+                            <p class="card-text">Киз Д.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/31c/244_390_1/31c010825f3419db63d8431f412cb25f.jpg" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Виноваты звезды</h5>
+                            <p class="card-text">Грин Д.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/e2c/247_390_1/e2c0c985db4b1e21dc8563badab99c1a.jpg" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Дети мои</h5>
+                            <br>
+                            <p class="card-text">Яхина Г.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/cdd/238_390_1/cdd45daccd455ad895384f1d2e950c1d.jpg" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Абиссаль</h5>
+                            <br>
+                            <p class="card-text">Крамер С.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sections mt-5" id="fantastika">
+            <h1>Фантастика, Ужасы:</h1>
+            <h2>Фантастика</h2>
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/6e9/233_390_1/6e96b127930df82d0d85b30e2b57d366.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Благие знамения</h5>
+                            <p class="card-text">Пратчетт Т.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/a49/238_390_1/a497a0c46b30f0c5298533f0321d898e.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Тень и кость</h5>
+                            <br>
+                            <p class="card-text">Бардуго Л.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/b84/251_390_1/w1j4e4zd3t4690vbriev2nwd3915m2ff.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Владения Хаоса</h5>
+                            <p class="card-text">Желязны Р.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/77b/246_390_1/77be767ca9a588e00cde0055f9024733.jpg" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Порог</h5>
+                            <br>
+                            <p class="card-text">Лукьяненко С.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/2e1/247_390_1/sy2x635dcny40bzlk52hp0gsb922g7hm.jpg" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Дом драконов</h5>
+                            <p class="card-text">Мартин Д.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/880/239_390_1/36p7fb0g7625ai6b5woksqzyyo5j1cte.jpg" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Невернесс</h5>
+                            <br>
+                            <p class="card-text">Зинделл Д.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mt-4">Ужасы</h2>
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/c22/242_390_1/c22d5a82300204245e17fb43d04d0f1e.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Оно</h5>
+                            <br>
+                            <p class="card-text">Кинг С.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/e79/244_390_1/e793ffe5e36474d03665b03a43013548.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Зеленая миля</h5>
+                            <p class="card-text">Кинг С.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/730/244_390_1/7300ba25fa0e5fdb5f49392bb0937457.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Мертвая зона</h5>
+                            <p class="card-text">Кинг С.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/010/239_390_1/0xfx0256yeths0dp8tab3m7602ek61vx.jpg" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Только монстр</h5>
+                            <p class="card-text">Лен В.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/f8d/239_390_1/cx71ch1w14la9786tdfdj0o5wy74inmw.jpg" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Шепот мертвецов</h5>
+                            <p class="card-text">Коутс Д.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/d8f/253_390_1/d8f7e2229de429a763f3efc81f202d54.jpg" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Сердце Сумрака</h5>
+                            <p class="card-text">Желунов Н.А.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sections mt-5" id="ostrosyuzhet">
+            <h1>Остросюжетная литература:</h1>
+            <h2>Детектив</h2>
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/fbc/238_390_1/fbc4d2268949f875099c5ce8418635f5.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Шепот за окном</h5>
+                            <p class="card-text">Норт А.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/6af/390_390_1/6af633830b939e2b32eeb67e7e603412.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Дьявол во мне</h5>
+                            <p class="card-text">Прах В.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/26f/238_390_1/26f72857992687ee9d602ee3a3a6156f.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Жена убийцы</h5>
+                            <p class="card-text">Метос В.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/e43/238_390_1/e43fe38520f38d655a97e83026d81d60.jpg" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Институт</h5>
+                            <br>
+                            <p class="card-text">Кинг С.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/bec/238_390_1/bec86a1fe762438aa1466459b2f626bd.jpg" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Будет кровь</h5>
+                            <br>
+                            <p class="card-text">Кинг С.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/7fc/240_390_1/4889s6gnxb415f323pvm9cy7lv5hpqro.jpg" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Поезд убийц</h5>
+                            <p class="card-text">Исака К.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mt-4">Триллер</h2>
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/299/390_390_1/aspqp46zaizmhxblqpwy1m3g1bgohxxc.webp" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Тьма падет</h5>
+                            <br>
+                            <p class="card-text">Брындза Р.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/10c/238_390_1/10ce66f8a6a1e41927e4f00c8d82eae8.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Пустошь</h5>
+                            <br>
+                            <p class="card-text">Александер Д.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/4f5/239_390_1/4f5f3b7bde10cc480e38d37e23db0c5c.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Заживо в темноте</h5>
+                            <p class="card-text">Омер М.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/d4e/238_390_1/eba2mf6hvqz7pklim859gjl449s307gl.jpg" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Code. Носители</h5>
+                            <p class="card-text">Маррс Дж.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/84e/234_390_1/038x3goyun0geeykzojvev07wwrlc91t.jpg" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Тьма между нами</h5>
+                            <p class="card-text">Маррс Дж.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/b71/251_390_1/dr1pjk6z7vgidzt7dzu7pf4ne5qgz4qk.jpg" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Другая миссис</h5>
+                            <p class="card-text">Кубика М.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sections mt-5" id="poeziya">
+            <h1>Поэзия:</h1>
+            <h2>Классическая</h2>
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/d26/238_390_1/d26de29e6282c2f98f91de689528abc8.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Книга томления</h5>
+                            <p class="card-text">Коэн Л.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/086/239_390_1/mtmort3dhkqdot6rapnm69xk0fjahm3m.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Басни</h5>
+                            <br>
+                            <p class="card-text">Крылов И.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/d02/240_390_1/uxm9s2m6075fhneetuw4kocyeo34qc6x.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Маскарад</h5>
+                            <br>
+                            <p class="card-text">Лермонтов М.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/037/238_390_1/0376c9c560a6b059bbe38764143ddff7.jpg" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Евгений Онегин</h5>
+                            <p class="card-text">Пушкин А.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/e29/280_390_1/e293565cac597c61026214e660f93c6e.jpg" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Лирика</h5>
+                            <br>
+                            <p class="card-text">Пастернак Б.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/006/280_390_1/0061ae472d67628296a3bafeb255be8b.jpg" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Рубаи</h5>
+                            <br>
+                            <p class="card-text">Хайям О.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mt-4">Современная</h2>
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/a73/238_390_1/xymcecr1ygkpsps0p5vtv9s0flxs7h8b.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Вот так соседка</h5>
+                            <p class="card-text">Уилсон С.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/iblock/22a/22a2dfc5eebca84698960f8979326464.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Избранное</h5>
+                            <br>
+                            <p class="card-text">Асадов Э.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/7aa/280_390_1/7aa4852948d497fb8e4520b38782a1c4.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Лирика</h5>
+                            <br>
+                            <p class="card-text">Окуджава Б.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/b1a/239_390_1/eqfwoc5t70tn1y361cgb3rnym10upaaf.jpg" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Во весь голос.</h5>
+                            <p class="card-text">Маяковский В.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/f21/262_390_1/f2117866c112f8e52a3664f80bacf4b5.jpg" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Без грима</h5>
+                            <br>
+                            <p class="card-text">Астахова А.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card h-100">
+                        <img src="https://book24.kz/upload/resize_cache/iblock/9d5/254_390_1/9d58c91d048ef047ed56feb438f36bf3.jpg" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Моя любовь</h5>
+                            <p class="card-text">Асадов Э.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-white text-center py-2">
+        <p>&copy; 2023 Книжный магазин</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var scrollLinks = document.querySelectorAll(".scroll-link");
+            scrollLinks.forEach(function (link) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault(); // Отмена стандартного поведения ссылки
+
+                    var targetId = this.getAttribute("href").substring(1); // Извлечение id элемента из ссылки
+                    var targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        var offset = 160; // Отступ, который вы хотите учитывать
+
+                        // Прокрутка к элементу с учетом отступа
+                        window.scrollTo({
+                            top: targetElement.offsetTop - offset,
+                            behavior: "smooth" // Плавная анимированная прокрутка
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

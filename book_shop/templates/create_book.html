@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Добавление новой книги</h2>
+    <form method="post" enctype="multipart/form-data" class="row g-3" action="{% url 'create-book' %}">
+        {% csrf_token %}
+        <div class="mb-3 col-md-6">
+            <label for="id_title" class="form-label">Название</label>
+            <input type="text" class="form-control" id="id_title" name="title" value="{{ form.title.value|default:'' }}">
+        </div>
+        <div class="mb-3 col-md-6">
+  <label for="id_author" class="form-label">Автор</label>
+  <select class="form-select" id="id_author" name="author">
+  <option value="">Выберите автора</option>
+  {% for author in authors %}
+  <option value="{{ author.id }}" {% if form.instance.author_id == author.id %}selected{% endif %}>
+    {{ author.name }}
+  </option>
+  {% endfor %}
+</select>
+  <span class="text-secondary">
+    Если нет подходящего автора, то <a href="javascript:void(0);" onclick="window.open('{% url 'create-author' %}', 'newwindow', 'width=800,height=600'); return false;">создайте его</a>.
+
+  </span>
+</div>
+        <div class="mb-3 col-12">
+            <label for="id_description" class="form-label">Описание</label>
+            <textarea class="form-control" id="id_description" name="description" rows="3">{{ form.description.value|default:'' }}</textarea>
+        </div>
+        <div class="mb-3 col-12">
+    <label for="formFile" class="form-label">Изображение</label>
+    <input class="form-control" type="file" id="formFile" name="image">
+</div>
+        <div class="mb-3 col-md-6">
+            <label for="id_article" class="form-label">Артикул</label>
+            <input type="text" class="form-control" id="id_article" name="article" value="{{ form.article.value|default:'' }}">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="id_price" class="form-label">Цена</label>
+            <input type="number" class="form-control" id="id_price" name="price" value="{{ form.price.value|default:'' }}">
+        </div>
+<div class="mb-3 col-md-6">
+  <label for="id_genre" class="form-label">Жанр</label>
+  <select class="form-select" id="id_genre" name="genres">
+  <option value="">Выберите жанр</option>
+  {% for genre in genres %}
+  <option value="{{ genre.id }}" {% if form.instance.genre_id == genre.id %}selected{% endif %}>
+    {{ genre.name }}
+  </option>
+  {% endfor %}
+</select>
+    Если нет подходящего жанра, то <a href="javascript:void(0);" onclick="window.open('{% url 'create-genre' %}', 'newwindow', 'width=800,height=600'); return false;">создайте его</a>.
+</div>
+    <div class="mb-3 col-md-6">
+  <label for="id_language" class="form-label">Язык</label>
+  <select class="form-select" id="id_language" name="language">
+  <option value="" {% if not form.language.value %}selected{% endif %}>Выберите язык</option>
+  {% for language in languages %}
+  <option value="{{ language.id }}" {% if form.instance.language_id == language.id %}selected{% endif %}>
+    {{ language.name }}
+  </option>
+  {% endfor %}
+</select>
+{#        Если нет подходящего языка, то <a href="javascript:void(0);" onclick="window.open('{% url 'create-language' %}', 'newwindow', 'width=800,height=600'); return false;">создайте его</a>.#}
+
+</div>
+        <div class="mb-3 col-12">
+            <label for="id_publication_date" class="form-label">Дата публикации</label>
+            <input type="date" class="form-control" id="id_publication_date" name="publication_date" value="{{ form.publication_date.value|default:'' }}">
+        </div>
+        <div class="mb-3 col-md-3">
+            <label for="id_is_available" class="form-label">В наличии</label>
+            <select class="form-select" id="id_is_available" name="is_available">
+                <option value="true">Да</option>
+                <option value="false">Нет</option>
+            </select>
+        </div>
+<div class="col-12">
+            <button type="submit" class="btn btn-primary">Добавить книгу</button>
+        </div>
+    </form>
+{% endblock %}

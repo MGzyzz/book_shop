@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный магазин</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% block content %}
+        {% if books %}
+        <div class="carousel">
+            <!-- Карусель самых популярных книг -->
+            <div id="popularBooksCarousel" class="carousel slide" data-ride="carousel">
+                <h2>Новинки</h2>
+                <div class="carousel-inner mt-4">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3053/3052926_550.jpg" class="d-block w-100" alt="Book 4">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3005/3004784_550.jpg" class="d-block w-100" alt="Book 5">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3002/3001380_550.jpg" class="d-block w-100" alt="Book 6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3054/3053230_550.jpg" class="d-block w-100" alt="Book 7">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3054/3053160_550.jpg" class="d-block w-100" alt="Book 8">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3054/3053196_550.jpg" class="d-block w-100" alt="Book 9">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3055/3054189_550.jpg" class="d-block w-100" alt="Book 1">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3055/3054318_550.jpg" class="d-block w-100" alt="Book 2">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.f.kz/prod/3037/3036971_550.jpg" class="d-block w-100" alt="Book 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#popularBooksCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#popularBooksCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" ariahidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="bestsellers">
+            <!-- Раздел с бестселлерами -->
+            <h2>Бестселлеры</h2>
+            <div class="row mt-4">
+            {% for book in books %}
+
+
+                 <div class="col-md-2">
+                <a href="{% url 'book-detail' book.id %}" class="text-decoration-none">
+                    <div class="card h-100">
+                        <img src="{{ book.image.url }}" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">{{ book.author }}</p>
+                        </div>
+                    </div>
+                </a>
+
+                </div>
+                        {% endfor %}
+
+            </div>
+            {% else %}
+            <h1 class="text-center">Товар Отсутствует</h1>
+
+            {% endif %}
+        </div>
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

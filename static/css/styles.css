@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+
+body {
+      display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+    background-image: url('https://phonoteka.org/uploads/posts/2021-04/1619279006_42-phonoteka_org-p-mrachnie-foni-stim-42.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.headernavfix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel {
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: #222;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+main {
+    padding: 170px 20px 20px 20px;
+}
+
+.card {
+    background-color: #222;
+    color: #fff;
+}
+
+.card-title, .card-text {
+    color: #fff;
+}
+
+.carousel {
+    margin-bottom: 20px;
+}
+
+.carousel-item img {
+    height: 520px; /* Установите нужную высоту */
+    object-fit: cover;
+}
+
+.bestsellers .card img {
+    height: 225px; /* Установите нужную высоту */
+    object-fit: cover;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

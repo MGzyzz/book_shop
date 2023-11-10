@@ -1,0 +1,19 @@
+body {
+    background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620318974_5-phonoteka_org-p-virtualnii-fon-biblioteka-5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.form-container {
+    background-color: rgba(29, 12, 0, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(94, 52, 52, 0.8);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+

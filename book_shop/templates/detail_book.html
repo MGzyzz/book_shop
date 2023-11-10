@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+          <h2>Название Книги: {{ book.title }}</h2>
+
+    <div class="col-md-4">
+      <img src="{{ book.image.url }}" alt="Название Книги" class="book-image rounded img-fluid">
+    </div>
+    <div class="col-md-8">
+      <div class="info-block text-white">
+          <p class="author">Автор Книги: {{ book.author }}</p>
+          <p>Описание книги: <br> {{ book.description }}</p>
+<p>Жанры: {% for genre in book.genres.all %}{{ genre.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+      <p>Книга переведена на {%  for language in book.language.all %}{{ language.name }} {% if not forloop.last %}, {% endif %}{% endfor %}</p>
+      <p>Дата публикации: {{ book.publication_date }}</p>
+      <p>Цена: {{ book.price }} тенге</p>
+      <p>Артикул: {{ book.article }}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
