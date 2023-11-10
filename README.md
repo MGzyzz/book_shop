@@ -2,7 +2,7 @@
 
 Общая настройка для всех операционных систем:
 
-git clone git@github.com:MGzyzz/book_shop.git
+git clone [git@github.com:MGzyzz/book_shop.git](https://github.com/MGzyzz/book_shop.git)
 
 Для запуска проекта, следуете по указаным пунктам 
 
